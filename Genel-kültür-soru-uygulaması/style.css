@@ -1,0 +1,160 @@
+.btn_start,
+.quiz_box,
+.score_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.quiz_box.active {
+    opacity: 1;
+    pointer-events: auto;
+
+    transform: translate(-50%,-50%) scale(1);
+}
+.quiz_box {
+    width: 750px;
+    
+    transform: translate(-50%,-50%) scale(0.7);
+    transition: all 0.3s ease;
+    
+    opacity: 0;
+    pointer-events: none;
+}
+
+.quiz_box header .title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.quiz_box .question-text {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.quiz_box .option_list {
+    padding: 18px 0;
+}
+
+.quiz_box .option_list .option {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quiz_box .option_list .option:hover {
+    background-color: #fecd04;
+    color: black;
+}
+.quiz_box .option_list .option.correct {
+    background-color: #00b200;
+    color: black;
+}
+.quiz_box .option_list .option.incorrect {
+    background-color: #ff0000;
+    color: black;
+}
+
+.quiz_box .option_list .option.disabled {
+    pointer-events: none;
+}
+
+.quiz_box .next_btn {
+    opacity: 0;
+    pointer-events: none;
+
+    transform: scale(0.7);
+    transition: all 0.3s ease;
+}
+
+
+.quiz_box .next_btn.show {
+    opacity: 1;
+    pointer-events: auto;
+
+    transform: scale(1);
+}
+
+.quiz_box footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* timer */
+.quiz_box header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.quiz_box header .timer {
+    display: flex;
+    align-items: center;
+    border: 5px solid #fecd04;
+    background-color: #fecd04;
+    border-radius: 5px;
+}
+.quiz_box header .time_text{
+    font-size: 16px;
+    margin: 3px;
+    font-weight: 500;
+}
+.quiz_box header .time_second {
+    font-size: 18px;
+    margin: 3px;
+    font-weight: 600;
+}
+.quiz_box header .time_line {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 5px;
+    background: #fecd04;
+    /* width: 750px; 0-750px arası */ 
+    right: 0px;
+}
+
+/* score-box */
+.score_box.active {
+    opacity: 1;
+    pointer-events: auto;
+
+    transform: translate(-50%,-50%) scale(1);
+}
+.score_box {
+    width: 750px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    
+    transform: translate(-50%,-50%) scale(0.7);
+    transition: all 0.3s ease;
+    
+    opacity: 0;
+    pointer-events: none;
+}
+
+.score_box .icon {
+    font-size: 70px;
+    color: #007bff;
+}
+
+.score_box .score_text {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.btn_replay,
+.btn_quit {
+    padding: 7px;
+    margin: 10px;
+}
