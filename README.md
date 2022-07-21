@@ -1,1 +1,0 @@
-# genel-kultur-uygulama
